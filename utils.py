@@ -50,3 +50,23 @@ def parse_data_html_files():
     # dump videos
     with open('videos.pickle', 'wb') as handle:
         pickle.dump(VIDEOS, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+# * Converts a date in french format to a date DD/MM/YYYY *
+def process_date(date):
+    replacements = [
+        (' janv. ', '/01/'),
+        (' févr. ', '/02/'),
+        (' mars ', '/03/'),
+        (' avr. ', '/04/'),
+        (' mai ', '/05/'),
+        (' juin ', '/06/'),
+        (' juil. ', '/07/'),
+        (' août ', '/08/'),
+        (' sept. ', '/09/'),
+        (' oct. ', '/10/'),
+        (' nov. ', '/11/'),
+        (' déc. ', '/12/')
+    ]
+    for old, new in replacements:
+        date = re.sub(old, new, date)
+    return date
