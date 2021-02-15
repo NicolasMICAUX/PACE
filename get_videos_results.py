@@ -3,6 +3,7 @@
 # Sample Python code for youtube.search.list
 # See instructions for running these code samples locally:
 # https://developers.google.com/explorer-help/guides/code_samples#python
+# https://developers.google.com/youtube/v3/docs/search/list
 
 import pickle
 
@@ -22,7 +23,7 @@ def main():
 
     api_service_name = "youtube"
     api_version = "v3"
-    DEVELOPER_KEY = "AIzaSyCyfrEdQAn0RTKWG3oHZYATJeDhPT9v5WU"
+    DEVELOPER_KEY = "*************"
 
     next_page = 'CKYEEAE'  # initialize page token to retrieve
 
